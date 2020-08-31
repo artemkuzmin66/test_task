@@ -1,0 +1,13 @@
+.footer {
+   &__text {
+      width: 50%;
+      height: 100%;
+      margin: 68px 0px 18px 68px;
+      font-family: Ubuntu;
+      font-style: normal;
+      font-weight: 500;
+      @include adaptiv-font(18, 15);
+      line-height: 22px;
+      color: #1254b5;
+   }
+}

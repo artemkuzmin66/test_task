@@ -1,0 +1,429 @@
+//====================================================================================================
+
+Стиль иконки бургера .icon-menu {
+	display: block;
+	position: absolute;
+	top: 18px;
+	right: 10px;
+	width: 30px;
+	height: 18px;
+	cursor: pointer;
+	z-index: 5;
+	span {
+		@include anim(0.3s, 0s);
+		top: 8px;
+		left: 0px;
+		position: absolute;
+		width: 100%;
+		height: 2px;
+		background-color: #000;
+		&:first-child {
+			top: 0px;
+		}
+		&:last-child {
+			top: auto;
+			bottom: 0px;
+		}
+	}
+	&.active {
+		span {
+			@include scale(0);
+			&:first-child {
+				@include rotate(-45deg);
+				top: 8px;
+			}
+			&:last-child {
+				@include rotate(45deg);
+				bottom: 8px;
+			}
+		}
+	}
+}
+.header {
+	&__info {
+		background-color: #14243d;
+		position: relative;
+		height: 49px;
+	}
+
+	&__icon-menu {
+		display: block;
+		position: absolute;
+		top: 18px;
+		right: 10px;
+		width: 30px;
+		height: 18px;
+		cursor: pointer;
+		z-index: 20;
+		display: none;
+		span {
+			@include anim(0.3s, 0s);
+			top: 8px;
+			left: 0px;
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			background-color: #fff;
+			&:first-child {
+				top: 0px;
+			}
+			&:last-child {
+				top: auto;
+				bottom: 0px;
+			}
+		}
+		&.active {
+			span {
+				@include scale(0);
+				&:first-child {
+					@include rotate(45deg);
+					top: 8px;
+				}
+				&:last-child {
+					@include rotate(-45deg);
+					bottom: 8px;
+				}
+			}
+		}
+	}
+	.menu-tab {
+		width: 250px;
+		height: 528px;
+		background-color: #14243d;
+		@include flexbox;
+		flex-direction: column;
+		position: absolute;
+		z-index: 10;
+		right: 0;
+		align-items: center;
+		top: 0;
+
+		li {
+			padding-top: 30px;
+		}
+		li:first-child {
+			margin-top: 40px;
+		}
+	}
+	.burger-text {
+		font-family: Open Sans;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		line-height: 16px;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+		color: #ffffff;
+		display: inline;
+		cursor: pointer;
+		transition: all 0.4s;
+	}
+
+	.burger-mail {
+		font-family: Ubuntu;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 20px;
+		line-height: 25px;
+		color: #f8f8f8;
+		margin-top: 50px;
+	}
+	.burger-phone {
+		font-family: Ubuntu;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 20px;
+		line-height: 25px;
+		color: #f8f8f8;
+		margin-top: 20px;
+	}
+	.burger-but {
+		width: 150px;
+		height: 30px;
+		background-color: transparent;
+		border: 1px solid #fff;
+		border-radius: 10px;
+		font-family: Ubuntu;
+		font-style: normal;
+		font-weight: 300;
+		font-size: 12px;
+		line-height: 15px;
+		color: #f8f8f8;
+		margin-top: 20px;
+
+		filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+	}
+	.burger-ico {
+		margin-top: 70px;
+	}
+
+	&__logo {
+		position: absolute;
+		left: 20px;
+		top: 9px;
+	}
+
+	&__but {
+		position: absolute;
+		right: 438px;
+		top: 12px;
+		width: 150px;
+		height: 30px;
+		background-color: transparent;
+		border: 1px solid #fff;
+		border-radius: 10px;
+		font-family: Ubuntu;
+		font-style: normal;
+		font-weight: 300;
+		font-size: 12px;
+		line-height: 15px;
+		color: #f8f8f8;
+
+		filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+	}
+
+	&__mail {
+		position: absolute;
+		right: 233px;
+		top: 14px;
+		font-family: Ubuntu;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 20px;
+		line-height: 25px;
+		color: #f8f8f8;
+	}
+
+	&__phone {
+		position: absolute;
+		right: 20px;
+		top: 14px;
+		font-family: Ubuntu;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 20px;
+		line-height: 25px;
+		color: #f8f8f8;
+	}
+
+	&__nav {
+		height: 40px;
+		background-color: #1254b5;
+		@include flexbox;
+		align-items: center;
+	}
+
+	&__nav-text {
+		font-family: Open Sans;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		line-height: 16px;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+		color: #ffffff;
+		display: inline;
+		margin-left: 30px;
+		margin-bottom: 19px;
+		cursor: pointer;
+		transition: all 0.4s;
+
+		a {
+			font-family: Open Sans;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 12px;
+			line-height: 16px;
+			letter-spacing: 0.05em;
+			text-transform: uppercase;
+			color: #ffffff;
+			display: inline;
+			margin-left: 30px;
+			margin-bottom: 19px;
+			cursor: pointer;
+			transition: all 0.4s;
+			position: relative;
+		}
+
+		&:hover {
+			opacity: 0.5;
+		}
+	}
+	&__nav-text:nth-child(1) {
+		margin-left: 219px;
+	}
+	.popup {
+		&__menu-1 {
+			position: absolute;
+			width: 200px;
+			height: 90px;
+			left: 230px;
+			top: 89px;
+			background-color: #fff;
+			z-index: 1;
+			display: none;
+		}
+		&__menu-2 {
+			position: absolute;
+			width: 200px;
+			height: 90px;
+			left: 410px;
+			top: 89px;
+			background-color: #fff;
+			z-index: 1;
+			display: none;
+		}
+		&__menu-3 {
+			position: absolute;
+			width: 200px;
+			height: 90px;
+			left: 750px;
+			top: 89px;
+			background-color: #fff;
+			z-index: 1;
+			display: none;
+		}
+		&__menu-4 {
+			position: absolute;
+			width: 200px;
+			height: 90px;
+			left: 870px;
+			top: 89px;
+			background-color: #fff;
+			z-index: 1;
+			display: none;
+		}
+		&__menu-5 {
+			position: absolute;
+			width: 200px;
+			height: 90px;
+			left: 1030px;
+			top: 89px;
+			background-color: #fff;
+			z-index: 1;
+			display: none;
+		}
+
+		&__menu-text {
+			font-family: Ubuntu;
+			font-style: normal;
+			font-weight: 300;
+			font-size: 12px;
+			line-height: 15px;
+			color: #000000;
+			text-align: left;
+			margin: 8px 16px 8px 15px;
+			display: block;
+		}
+		&__menu-text:nth-child(3) {
+			margin-top: 16px;
+			position: relative;
+
+			&::before {
+				content: "";
+				width: 200px;
+				height: 0;
+				border: 1px solid #d8dbe8;
+				position: absolute;
+				left: 50%;
+				transform: translate(-50%, 0);
+				top: -10px;
+			}
+		}
+		&__menu-text:nth-child(2) {
+			margin-top: 16px;
+			position: relative;
+
+			&::before {
+				content: "";
+				width: 200px;
+				height: 0;
+				border: 1px solid #d8dbe8;
+				position: absolute;
+				left: 50%;
+				transform: translate(-50%, 0);
+				top: -10px;
+			}
+		}
+	}
+}
+// main
+
+.header {
+	&__main {
+		position: relative;
+		width: 100%;
+		height: 720px;
+		background: url(../img/ico_header/bg.jpg);
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+
+	&__main-text {
+		font-family: Ubuntu;
+		font-style: normal;
+		font-weight: bold;
+		@include adaptiv-font(70, 23);
+		text-transform: uppercase;
+		color: #ffffff;
+		width: 60%;
+		padding-top: 107px;
+		padding-left: 220px;
+	}
+	&__main-text-flex {
+		display: flex;
+		margin: 45px 45px 0px 220px;
+	}
+
+	&__main-text-two-1 {
+		font-family: Ubuntu;
+		font-style: normal;
+		font-weight: 500;
+		@include adaptiv-font(18, 18);
+		line-height: 22px;
+		color: #ffffff;
+		width: 253px;
+		position: relative;
+
+		&::before {
+			content: "";
+			width: 35px;
+			height: 0;
+			border: 1px solid #d8dbe8;
+			position: absolute;
+			left: -25%;
+			top: 10px;
+		}
+	}
+	&__main-text-two-2 {
+		font-family: Ubuntu;
+		font-style: normal;
+		font-weight: 500;
+		@include adaptiv-font(18, 18);
+		line-height: 22px;
+		color: #ffffff;
+		width: 273px;
+		padding-left: 45px;
+	}
+
+	&__main-work-time {
+		font-family: Ubuntu;
+		font-style: normal;
+		font-weight: 300;
+		font-size: 12px;
+		line-height: 15px;
+		color: #f8f8f8;
+		width: 200px;
+		height: 51.81px;
+		position: absolute;
+		bottom: 48px;
+		right: 13px;
+		border: 1px solid #cccccc;
+		text-align: center;
+		opacity: 0.6;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
